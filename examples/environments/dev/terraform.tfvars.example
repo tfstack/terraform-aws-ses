@@ -1,0 +1,26 @@
+aws_region = "ap-southeast-2"
+
+name_prefix            = "app-mail-dev"
+configuration_set_name = "app-mail-dev"
+
+email_identities = [
+  "noreply-dev@example.com",
+  "alerts-dev@example.com",
+]
+
+test_from_address = "noreply-dev@example.com"
+test_to_address   = "alerts-dev@example.com"
+
+allowed_from_addresses = [
+  "noreply-dev@example.com",
+  "alerts-dev@example.com",
+]
+
+# Demo visibility only. Confirm the SNS email after apply.
+sns_email_subscriptions = [
+  "alerts-dev@example.com",
+]
+
+tags = {
+  Project = "app-mail"
+}
